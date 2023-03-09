@@ -112,6 +112,14 @@
                     <connections>
                         <outlet property="lstick" destination="cyp-Qn-JTO" id="scO-dw-jY0"/>
                         <outlet property="snack" destination="cyp-Qn-JTO" id="fkd-5g-Uxz"/>
+                        <outlet property="snack_food1" destination="lMh-19-s8h" id="d89-7U-s1K"/>
+                        <outlet property="snack_food2" destination="fuY-DO-svl" id="lGl-sN-gOy"/>
+                        <outlet property="snack_food3" destination="PSD-Jd-fib" id="uKH-po-BOF"/>
+                        <outlet property="snack_food4" destination="cEk-vG-SSm" id="R9E-lv-dOZ"/>
+                        <outlet property="snack_food5" destination="nVC-oG-grY" id="rA2-Sm-SmF"/>
+                        <outlet property="snack_food6" destination="FD7-0A-fIN" id="Gtf-mf-CJp"/>
+                        <outlet property="snack_food7" destination="bAO-nd-1XR" id="HHl-bd-pKQ"/>
+                        <outlet property="snack_food8" destination="VGr-md-Icm" id="eJY-Fl-55c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
