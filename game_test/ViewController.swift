@@ -142,15 +142,50 @@ class ViewController: UIViewController {
     func food_eat(){
         let x = snack.frame.origin.x
         let y = snack.frame.origin.y
-        let snack_food_while_x = Int(x) - food1_x
-        let snack_food_while_y = Int(y) - food1_y
+        let snack_food_while_x1 = Int(x) - food1_x
+        let snack_food_while_y1 = Int(y) - food1_y
+        let snack_food_while_x2 = Int(x) - food2_x
+        let snack_food_while_y2 = Int(y) - food2_y
+        let snack_food_while_x3 = Int(x) - food3_x
+        let snack_food_while_y3 = Int(y) - food3_y
+        let snack_food_while_x4 = Int(x) - food4_x
+        let snack_food_while_y4 = Int(y) - food4_y
+        let snack_food_while_x5 = Int(x) - food5_x
+        let snack_food_while_y5 = Int(y) - food5_y
+        let snack_food_while_x6 = Int(x) - food6_x
+        let snack_food_while_y6 = Int(y) - food6_y
+        let snack_food_while_x7 = Int(x) - food7_x
+        let snack_food_while_y7 = Int(y) - food7_y
+        let snack_food_while_x8 = Int(x) - food8_x
+        let snack_food_while_y8 = Int(y) - food8_y
         
-        print(snack_food_while_x)
-        print(snack_food_while_y)
+        print(snack_food_while_x2)
+        print(snack_food_while_y2)
         
         //餌を食べる条件
-        if (snack_food_while_x < 10) && (snack_food_while_y <= 10){
+        if (snack_food_while_x1 < 10) && (snack_food_while_y1 <= 20){
             snack_food1.image = nil
+        }
+        if (snack_food_while_x2 < 20) && (snack_food_while_y2 <= 20){
+            snack_food2.image = nil
+        }
+        if (snack_food_while_x3 < 30) && (snack_food_while_y3 <= 20){
+            snack_food3.image = nil
+        }
+        if (snack_food_while_x4 < 40) && (snack_food_while_y4 <= 20){
+            snack_food4.image = nil
+        }
+        if (snack_food_while_x5 < 50) && (snack_food_while_y5 <= 20){
+            snack_food5.image = nil
+        }
+        if (snack_food_while_x6 < 60) && (snack_food_while_y6 <= 20){
+            snack_food6.image = nil
+        }
+        if (snack_food_while_x7 < 70) && (snack_food_while_y7 <= 20){
+            snack_food7.image = nil
+        }
+        if (snack_food_while_x8 < 80) && (snack_food_while_y8 <= 20){
+            snack_food8.image = nil
         }
         else {
         }
