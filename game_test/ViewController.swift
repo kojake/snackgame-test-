@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  game_test
-//
-//  Created by kaito on 2023/03/05.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -166,29 +159,35 @@ class ViewController: UIViewController {
         if (snack_food_while_x1 < 10) && (snack_food_while_y1 <= 20){
             snack_food1.image = nil
         }
-        if (snack_food_while_x2 < 20) && (snack_food_while_y2 <= 20){
+        if (snack_food_while_x2 < 30) && (snack_food_while_y2 <= 20){
             snack_food2.image = nil
         }
-        if (snack_food_while_x3 < 30) && (snack_food_while_y3 <= 20){
+        if (snack_food_while_x3 < 50) && (snack_food_while_y3 <= 20){
             snack_food3.image = nil
         }
-        if (snack_food_while_x4 < 40) && (snack_food_while_y4 <= 20){
+        if (snack_food_while_x4 < 70) && (snack_food_while_y4 <= 20){
             snack_food4.image = nil
         }
-        if (snack_food_while_x5 < 50) && (snack_food_while_y5 <= 20){
+        if (snack_food_while_x5 < 90) && (snack_food_while_y5 <= 20){
             snack_food5.image = nil
         }
-        if (snack_food_while_x6 < 60) && (snack_food_while_y6 <= 20){
+        if (snack_food_while_x6 < 110) && (snack_food_while_y6 <= 20){
             snack_food6.image = nil
         }
-        if (snack_food_while_x7 < 70) && (snack_food_while_y7 <= 20){
+        if (snack_food_while_x7 < 130) && (snack_food_while_y7 <= 20){
             snack_food7.image = nil
         }
-        if (snack_food_while_x8 < 80) && (snack_food_while_y8 <= 20){
+        if (snack_food_while_x8 < 150) && (snack_food_while_y8 <= 20){
             snack_food8.image = nil
         }
         else {
         }
             
     }
+    
+    //メニュー
+    @IBAction func menu(_ sender: Any) {
+        performSegue(withIdentifier: "ModalSegue", sender: nil)
+    }
+    
     }

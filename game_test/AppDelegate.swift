@@ -7,6 +7,10 @@
 
 import UIKit
 
+var level = 2
+var level_total = 0.1
+var diamond = 3
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
