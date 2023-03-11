@@ -11,7 +11,7 @@
         <!--Homeview-->
         <scene sceneID="JOp-Zm-LnL">
             <objects>
-                <viewController id="w9C-vu-c7C" customClass="homeview" customModule="game_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="w9C-vu-c7C" customClass="homeview" customModule="game_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7u0-ZJ-Gzb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="GIFT">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="33"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="GIFT_button:" destination="w9C-vu-c7C" eventType="touchUpInside" id="ttV-sE-kpX"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hebi" translatesAutoresizingMaskIntoConstraints="NO" id="49i-V9-ZeT">
                                 <rect key="frame" x="0.0" y="48" width="151" height="128"/>
@@ -83,6 +86,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SHOP">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="34"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SHOP_button:" destination="w9C-vu-c7C" eventType="touchUpInside" id="9k9-LZ-56d"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A04-rc-yZL">
                                 <rect key="frame" x="133" y="440" width="281" height="439"/>
@@ -102,10 +108,13 @@
                         <viewLayoutGuide key="safeArea" id="ksY-9q-eTu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mU1-la-twV"/>
                     <connections>
                         <outlet property="diamond_quantity_label" destination="Ieo-Lg-nYa" id="jhf-aS-DW7"/>
                         <outlet property="level_label" destination="814-xb-0wh" id="bmb-hV-gLf"/>
                         <outlet property="level_progress" destination="RFN-8g-qIQ" id="uKG-UI-T9s"/>
+                        <outlet property="shop_gift_label" destination="F6j-ch-vN4" id="Is1-2H-9ly"/>
+                        <outlet property="shop_gift_view" destination="A04-rc-yZL" id="39o-sd-tUU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2A-L6-WWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -142,6 +151,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="36"/>
                                     <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="w9C-vu-c7C" kind="show" id="u4v-Mf-hSd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pP-ps-Q6n">
                                 <rect key="frame" x="21" y="717" width="374" height="100"/>
@@ -259,7 +271,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0.square.fill.ar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-DO-svl">
-                                <rect key="frame" x="55" y="38" width="58" height="59"/>
+                                <rect key="frame" x="29" y="312" width="58" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -268,18 +280,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0.square.fill.ar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cEk-vG-SSm">
-                                <rect key="frame" x="153" y="38" width="58" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0.square.fill.ar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nVC-oG-grY">
-                                <rect key="frame" x="202" y="38" width="58" height="59"/>
+                                <rect key="frame" x="336" y="218" width="58" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0.square.fill.ar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FD7-0A-fIN">
-                                <rect key="frame" x="251" y="38" width="58" height="59"/>
+                                <rect key="frame" x="348" y="486" width="58" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -309,6 +316,11 @@
                                     <segue destination="CZg-OY-xqt" kind="presentation" identifier="ModalSegue" id="ICW-Xm-T5Z"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0.square.fill.ar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cEk-vG-SSm">
+                                <rect key="frame" x="55" y="516" width="58" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
